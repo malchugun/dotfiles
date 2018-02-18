@@ -8,10 +8,10 @@ sudo apt install -y build-essential cmake python3-dev
 if dpkg -l|grep -q python2.7; then sudo apt install -y python-dev; fi
 
 # git
-ln -s ~/.ddotfiles/git/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 
 # tmux
-ln -s ~/.ddotfiles/tmux/.tmux-ide.conf ~/.tmux-ide.conf
+ln -s ~/.dotfiles/tmux/.tmux-ide.conf ~/.tmux-ide.conf
 
 # zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.dotfiles/zsh/.oh-my-zsh 
