@@ -5,6 +5,8 @@ sudo apt install -y zsh mtr-tiny tcpdump vim git htop iptraf-ng netcat-openbsd p
 
 # install packages for youcompleteme
 sudo apt install -y build-essential cmake python3-dev
+if dpkg -l|grep -q python2.7; then
+    sudo apt install python-dev
 
 # git
 ln -s ~/.ddotfiles/git/.gitconfig ~/.gitconfig
@@ -29,7 +31,7 @@ vim +PluginInstall +qall
 ~/.vim/bundle/YouCompleteMe/./install.py --clang-completer
 
 # changing default shell
-echo "Enter password to change default user shell"
+echo "\nEnter password to change default user shell\n"
 chsh -s /bin/zsh
 
 
