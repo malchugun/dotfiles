@@ -22,8 +22,8 @@ ln -s ~/.dotfiles/zsh/themes/malchugun.zsh-theme ~/.dotfiles/zsh/.oh-my-zsh/them
 sudo ln -s /usr/bin/python3 /usr/bin/python
 
 # vim
-ln -s ~/.ddotfiles/vim/.vim ~/.vim
-ln -s ~/.ddotfiles/vim/.vim/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/vim/.vim ~/.vim
+ln -s ~/.dotfiles/vim/.vim/.vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ~/.vim/bundle/YouCompleteMe/./install.py --clang-completer
 
