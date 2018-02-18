@@ -96,6 +96,6 @@ alias p="pwd"
 alias l="ls -a1 --group-directories-first --color=auto"
 alias ide="source ~/Venv/bin/activate; cd ~/Projects; tmux -2 -f ~/.tmux-ide.conf new 'vim'"
 alias rdw="cd /etc/openvpn;sudo openvpn rdw.ovpn&"
-alias nordw="killall openvpn"
+alias nordw="sudo killall openvpn"
 alias server="ssh 192.168.22.2"
 
