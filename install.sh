@@ -5,8 +5,7 @@ sudo apt install -y zsh mtr-tiny tcpdump vim git htop iptraf-ng netcat-openbsd p
 
 # install packages for youcompleteme
 sudo apt install -y build-essential cmake python3-dev
-if dpkg -l|grep -q python2.7; then
-    sudo apt install python-dev
+if dpkg -l|grep -q python2.7; then sudo apt install python-dev; fi
 
 # git
 ln -s ~/.ddotfiles/git/.gitconfig ~/.gitconfig
