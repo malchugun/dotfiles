@@ -94,5 +94,5 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias p="pwd"
 alias l='ls -a1 --group-directories-first --color=auto'
-alias ide='source ~/venv/bin/activate; cd ~/Projects; tmux -2 -f ~/.tmux-ide.conf new "vim"'
+alias ide='source ~/Venv/bin/activate; cd ~/Projects; tmux -2 -f ~/.tmux-ide.conf new "vim"'
 
