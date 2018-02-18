@@ -2,12 +2,18 @@
 
 # git
 ln -s .dotfiles/git/.gitconfig ../.gitconfig
+
 # tmux
 ln -s .dotfiles/tmux/.tmux-ide.conf ../.tmux-ide.conf
+
 # vim
 ln -s .dotfiles/vim/.vim ../.vim
 ln -s .dotfiles/vim/.vim/.vimrc ../.vimrc
+
 # zsh
 ln -s .dotfiles/zsh/.zshrc ../.zshrc
 ln -s .dotfiles/zsh/.oh-my-zsh ../.oh-my-zsh
+
+# disr & links
+sudo ln -s /usr/bin/python3 /usr/bin/python
 

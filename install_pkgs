@@ -10,5 +10,5 @@ sudo apt install -y build-essential cmake python3-dev
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # install youcompleteme
-# /.vim/bundle/YouCompleteMe/./install.py --clang-completer
+~/.vim/bundle/YouCompleteMe/./install.py --clang-completer
 
