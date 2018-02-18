@@ -33,5 +33,5 @@ vim +PluginInstall +qall
 # changing default shell
 echo "\nEnter password to change default user shell\n"
 chsh -s /bin/zsh
-
+/bin/zsh
 
