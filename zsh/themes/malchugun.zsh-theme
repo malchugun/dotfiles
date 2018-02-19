@@ -4,7 +4,7 @@ PROMPT='%{$fg[yellow]%}%M:%{$fg_bold[blue]%}%c${ret_status}%{$reset_color%}$(git
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$BG[232]$FG[222]%}(|%{$FG[064]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[222]%}|%{$fg[red]%}✗%{$reset_color%}$FG[222]%})"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[222]%}|%{$fg[green]%}✔%{$reset_color%})$FG[222]%})"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[222]%}|%{$fg[green]%}✔%{$reset_color%}$FG[222]%})"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚ "
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}⚑ "
