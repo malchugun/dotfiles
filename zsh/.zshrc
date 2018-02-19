@@ -88,8 +88,23 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
+
+# Traditional fd forwarding style
+unsetopt MULTIOS
+
+# Support ~... and file completion after = in args
+setopt MAGIC_EQUAL_SUBST
+
+# Not processing escape sequence in echo without -e
+setopt BSD_ECHO
+
+# Support comments in command line
+setopt INTERACTIVE_COMMENTS
+
+# Support $(cmd) in $PS1 etc.
+setopt PROMPT_SUBST
+
+# Aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias p="pwd"
@@ -98,4 +113,5 @@ alias ide="source ~/Venv/bin/activate; cd ~/Projects; tmux -2 -f ~/.tmux-ide.con
 alias rdw="cd /etc/openvpn;sudo openvpn rdw.ovpn&"
 alias nordw="sudo killall openvpn"
 alias server="ssh 192.168.22.2"
+
 
