@@ -15,9 +15,6 @@ ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/.oh-my-zsh ~/.oh-my-zsh
 ln -s ~/.dotfiles/zsh/themes/malchugun.zsh-theme ~/.dotfiles/zsh/.oh-my-zsh/themes/malchugun.zsh-theme
 
-# python
-sudo ln -s /usr/bin/python3 /usr/bin/python
-
 # vim
 ln -s ~/.dotfiles/vim/.vim ~/.vim
 ln -s ~/.dotfiles/vim/.vim/.vimrc_no_ycm ~/.vimrc
