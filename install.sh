@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install necessary packages
-sudo apt install -y zsh mtr-tiny tcpdump vim git htop iptraf-ng netcat-openbsd pv lzop tmux 
+sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux 
 
 # install packages for youcompleteme
 sudo apt install -y build-essential cmake python3-dev
