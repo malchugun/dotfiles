@@ -4,7 +4,7 @@
 sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux 
 
 # install packages for youcompleteme
-sudo apt install -y build-essential cmake python3-dev
+sudo apt install -y build-essential cmake python3-dev silversearcher-ag
 if dpkg -l|grep -q python2.7; then sudo apt install -y python-dev; fi
 
 # git

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install necessary packages
-sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux 
+sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux silversearcher-ag 
 
 # git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
