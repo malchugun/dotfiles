@@ -14,7 +14,8 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/tmux/.tmux-ide.conf ~/.tmux-ide.conf
 
 # zsh
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.dotfiles/zsh/.oh-my-zsh 
+git submodule init
+git submodule update
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/.oh-my-zsh ~/.oh-my-zsh
 ln -s ~/.dotfiles/zsh/themes/malchugun.zsh-theme ~/.dotfiles/zsh/.oh-my-zsh/themes/malchugun.zsh-theme
