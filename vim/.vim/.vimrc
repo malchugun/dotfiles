@@ -27,7 +27,7 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
     Plugin 'majutsushi/tagbar'                  " Class/module browser
     Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
-    Plugin  'rking/ag.vim'                      " Search in project
+    Plugin 'mileszs/ack.vim'                    " Search in project
     
     "-------------------=== Other ===-------------------------------
     Plugin 'bling/vim-airline'                  " Lean & mean status/tabline for vim
