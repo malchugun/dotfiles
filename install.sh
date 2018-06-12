@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install necessary packages
-sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux 
+sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux ack-grep 
 
 # install packages for youcompleteme
 sudo apt install -y build-essential cmake python3-dev silversearcher-ag
