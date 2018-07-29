@@ -55,7 +55,9 @@ call vundle#begin()
     "-------------------=== Python  ===-----------------------------
     Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
     Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
-    Plugin 'Valloric/YouCompleteMe'             " Fastest autocomplete"
+    Plugin 'Valloric/YouCompleteMe'             " Fastest autocomplete
+    Plugin 'Chiel92/vim-autoformat'             " Autoformat 
+
 call vundle#end()                           " required
 filetype on
 filetype plugin on
@@ -247,6 +249,10 @@ let g:ycm_confirm_extra_conf=0
 
 nmap <leader>g :YcmCompleter GoTo<CR>
 nmap <leader>d :YcmCompleter GoToDefinition<CR>
+
+" Autoformat
+noremap <F3> :Autoformat<CR>
+
 " For django
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
 let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure

@@ -4,8 +4,13 @@
 sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux ack-grep 
 
 # install packages for youcompleteme
-sudo apt install -y build-essential cmake python3-dev silversearcher-ag
+sudo apt install -y build-essential cmake
+
+# install python packages
+sudo apt install -y python3-pip python3-dev
 if dpkg -l|grep -q python2.7; then sudo apt install -y python-dev; fi
+# via pip3
+pip3 install autopep8 virtualenv
 
 # git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
