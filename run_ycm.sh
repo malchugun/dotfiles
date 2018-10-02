@@ -1,5 +1,5 @@
 #!/bin/bash
 
-git clone git@github.com:malchugun/dotfiles.git ~/.dotfiles
+git clone https://github.com/malchugun/dotfiles.git ~/.dotfiles
 ~/.dotfiles/install_ycm.sh
 
