@@ -52,7 +52,6 @@ Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.
 Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
 
 "-------------------=== Code  ===-----------------------------
-Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
 Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
 Plugin 'Chiel92/vim-autoformat'             " Autoformat
 
