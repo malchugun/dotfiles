@@ -116,3 +116,9 @@ alias nordw="sudo killall openvpn"
 alias server="ssh 192.168.22.2"
 
 
+
+export PATH=$PATH:/home/malchugun/.go/bin
+
+export GOPATH=/home/malchugun/go
+
+export PATH=$PATH:/home/malchugun/go/bin
