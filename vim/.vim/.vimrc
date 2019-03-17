@@ -177,5 +177,5 @@ noremap <F3> :Autoformat<CR>
 " Numbers On/OFF
 map <F6> :set nonumber!<CR>
 
-let g:completor_gocode_binary = '/usr/local/go'
+let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
 

@@ -115,10 +115,6 @@ alias rdw="cd /etc/openvpn;sudo openvpn rdw.ovpn&"
 alias nordw="sudo killall openvpn"
 alias server="ssh 192.168.22.2"
 
+export GOPATH=$HOME/Projects/Go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
-
-export PATH=$PATH:/home/malchugun/.go/bin
-
-export GOPATH=/home/malchugun/go
-
-export PATH=$PATH:/home/malchugun/go/bin
