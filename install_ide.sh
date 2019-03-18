@@ -33,8 +33,10 @@ export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # zsh
+cd .dotfiles
 git submodule init
 git submodule update
+cd
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/.oh-my-zsh ~/.oh-my-zsh
 ln -s ~/.dotfiles/zsh/themes/malchugun.zsh-theme ~/.dotfiles/zsh/.oh-my-zsh/themes/malchugun.zsh-theme
