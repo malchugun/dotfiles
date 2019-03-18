@@ -28,6 +28,9 @@ echo "Create the skeleton for your local users go directory"
 mkdir -p ~/Projects/Go
 # Remove Download
 rm go"${latest}".linux-amd64.tar.gz
+# For current shell
+export GOPATH=$HOME/Projects/Go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # zsh
 git submodule init
@@ -41,7 +44,7 @@ ln -s ~/.dotfiles/vim/.vim ~/.vim
 ln -s ~/.dotfiles/vim/.vim/.vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
-vim +GoInstallBinaries
+vim +GoInstallBinaries +qall
 
 # changing default shell
 echo "\nEnter password to change default user shell\n"
