@@ -33,7 +33,7 @@ export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # zsh
-cd .dotfiles
+cd ~/.dotfiles
 git submodule init
 git submodule update
 cd
