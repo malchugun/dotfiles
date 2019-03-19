@@ -48,6 +48,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 vim +GoInstallBinaries +qall
 
+# cron for nightly updates
+cd /tmp
+crontab -l > mycron
+echo "0 0 * * *  cd ~/.dotfiles && git pull" >> mycron
+crontab mycron
+rm mycron
+
 # changing default shell
 echo "\nEnter password to change default user shell\n"
 chsh -s /bin/zsh
