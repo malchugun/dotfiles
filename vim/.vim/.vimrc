@@ -179,3 +179,6 @@ map <F6> :set nonumber!<CR>
 
 let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
 
+" Run GOcode
+map <F5> :GoRun!<CR>
+
