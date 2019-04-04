@@ -150,13 +150,14 @@ let g:riv_disable_folding=1
 " save
 noremap <F4> :update<CR>
 
-" highlight 'long' lines (>= 80 symbols) in python files
+" highlight 'long' lines (>= 80 symbols) in python files and spaces for yaml
 augroup vimrc_autocmds
     autocmd!
     autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
     autocmd FileType python,rst,c,cpp set nowrap
     autocmd FileType python,rst,c,cpp set colorcolumn=80
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 augroup END
 
 " syntastic
@@ -181,4 +182,5 @@ let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
 
 " Run GOcode
 map <F5> :GoRun!<CR>
+
 
