@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# latest vim
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt-get update
+
 # install necessary packages
 sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux ack-grep 
 
