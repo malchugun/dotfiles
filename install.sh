@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt install -y vim
 
 # install necessary packages
-sudo apt install zsh mtr-tiny tcpdump git htop iptraf-ng pv lzop tmux ack-grep 
+sudo apt install -y zsh mtr-tiny tcpdump git htop iptraf-ng pv lzop tmux ack-grep 
 
 # git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
