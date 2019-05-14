@@ -18,6 +18,7 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/tmux/.tmux-ide.conf ~/.tmux-ide.conf
 
 # For current shell
+mkdir $HOME/Projects/Go
 export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
