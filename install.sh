@@ -6,7 +6,7 @@ sudo apt-get install -y software-properties-common
 # install latest vim
 sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt-get update
-sudo apt-install -y vim
+sudo apt install -y vim
 
 # install necessary packages
 sudo apt install zsh mtr-tiny tcpdump git htop iptraf-ng pv lzop tmux ack-grep 
