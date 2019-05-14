@@ -44,3 +44,5 @@ echo "0 0 * * *  cd ~/.dotfiles && git pull" >> mycron
 crontab mycron
 rm mycron
 
+sudo chsh vspirin -s /usr/bin/zsh
+
