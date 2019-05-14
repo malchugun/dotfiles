@@ -3,12 +3,13 @@
 # install software-prop 
 sudo apt-get install -y software-properties-common
 
-# latest vim
+# install latest vim
 sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt-get update
+sudo apt-install -y vim
 
 # install necessary packages
-sudo apt install zsh mtr-tiny tcpdump vim git htop iptraf-ng pv lzop tmux ack-grep 
+sudo apt install zsh mtr-tiny tcpdump git htop iptraf-ng pv lzop tmux ack-grep 
 
 # git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
