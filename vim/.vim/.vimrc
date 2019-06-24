@@ -73,8 +73,6 @@ syntax enable                               " syntax highlight
 set t_Co=256                                " set 256 colors
 colorscheme wombat256mod                    " set color scheme
 
-set paste                                   " paste without autoformat
-
 set number                                  " show line numbers
 set ruler
 set ttyfast                                 " terminal acceleration
