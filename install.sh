@@ -17,11 +17,6 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 # tmux
 ln -s ~/.dotfiles/tmux/.tmux-ide.conf ~/.tmux-ide.conf
 
-# For current shell
-mkdir -p $HOME/Projects/Go
-export GOPATH=$HOME/Projects/Go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
 # zsh
 cd ~/.dotfiles
 git submodule init
