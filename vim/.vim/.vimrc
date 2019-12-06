@@ -59,6 +59,8 @@ Plugin 'Chiel92/vim-autoformat'             " Autoformat
 Plugin 'fatih/vim-go'                       " This plugin adds Go language support for Vim
 Plugin 'maralla/completor.vim'              " New completor 
 
+"---------------------------------------------------------------
+Plugin 'andrewstuart/vim-kubernetes'
 
 call vundle#end()                           " required
 filetype on
