@@ -61,7 +61,6 @@ ENABLE_CORRECTION="true"
 plugins=(
   git
   kubectl
-  history
 )
 
 source $ZSH/oh-my-zsh.sh
