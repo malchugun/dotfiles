@@ -26,7 +26,7 @@ Plugin 'VundleVim/Vundle.vim'               " let Vundle manage Vundle, required
 "-------------------=== Code/Project navigation ===-------------
 Plugin 'scrooloose/nerdtree'                " Project and file navigation
 Plugin 'majutsushi/tagbar'                  " Class/module browser
-Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
+Plugin 'junegunn/fzf'                       " Fast transitions on project files
 Plugin 'mileszs/ack.vim'                    " Search in project
 Plugin 'tyok/nerdtree-ack'                  " Search in project with neerdtree
 
