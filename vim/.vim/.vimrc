@@ -120,6 +120,8 @@ nmap Q :qa<CR>
 set incsearch                               " incremental search
 set hlsearch                                " highlight search results
 
+nnoremap <silent> <C-p> :FZF<CR>|           " trying to replace ctrlp
+
 "=====================================================
 "" AirLine settings
 "=====================================================
@@ -185,5 +187,4 @@ let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
 
 " Run GOcode
 map <F5> :GoRun!<CR>
-
 
