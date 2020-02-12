@@ -120,3 +120,6 @@ alias server="ssh 192.168.22.2"
 export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+# Compinit
+autoload -Uz compinit && compinit -i
+
