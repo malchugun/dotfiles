@@ -16,6 +16,7 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 
 # tmux
 ln -s ~/.dotfiles/tmux/.tmux-ide.conf ~/.tmux-ide.conf
+ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 # zsh
 cd ~/.dotfiles
