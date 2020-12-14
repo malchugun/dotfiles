@@ -8,6 +8,8 @@
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
+
+"-------------------=== System ===--------------------
 let $vimhome=fnamemodify(resolve(expand("~/.vimrc")), ':p:h')
 let $vundle=$vimhome."/bundle/Vundle.vim"
 
@@ -19,6 +21,8 @@ set nocompatible
 "=====================================================
 filetype off
 set rtp+=$vundle
+
+"-------------------=== Plugins ===--------------------
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'               " let Vundle manage Vundle, required
@@ -29,8 +33,15 @@ Plugin 'majutsushi/tagbar'                  " Class/module browser
 Plugin 'junegunn/fzf'                       " Fast transitions on project files
 Plugin 'mileszs/ack.vim'                    " Search in project
 Plugin 'tyok/nerdtree-ack'                  " Search in project with neerdtree
+Plugin 'mbbill/undotree'                    " Undo tree
 
-"-------------------=== Other ===-------------------------------
+"-------------------=== Git plugins ===-------------
+Plugin 'tpope/vim-fugitive'                 " Git wrapper
+Plugin 'airblade/vim-gitgutter'             " Shows a git diff in the sign column
+"Plugin 'jreybert/vimagit'                   " Git interactive client
+"Plugin 'junegunn/gv.vim'                    " Git log visualiser
+
+"-------------------=== Design ===-------------------------------
 Plugin 'bling/vim-airline'                  " Lean & mean status/tabline for vim
 Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
 Plugin 'Lokaltog/powerline'                 " Powerline fonts plugin
@@ -38,7 +49,6 @@ Plugin 'fisadev/FixedTaskList.vim'          " Pending tasks list
 Plugin 'rosenfeld/conque-term'              " Consoles as buffers
 Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
 Plugin 'flazz/vim-colorschemes'             " Colorschemes
-Plugin 'tpope/vim-fugitive'                 " Git plugin
 
 "-------------------=== Snippets support ===--------------------
 Plugin 'garbas/vim-snipmate'                " Snippets manager
@@ -48,21 +58,19 @@ Plugin 'honza/vim-snippets'                 " snippets repo
 
 "-------------------=== Languages support ===-------------------
 Plugin 'scrooloose/nerdcommenter'           " Comment stuff out
+Plugin 'fatih/vim-go'                       " This plugin adds Go language support for Vim
 Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
 Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
+Plugin 'andrewstuart/vim-kubernetes'        " K8s
 
 "-------------------=== Code  ===-----------------------------
+Plugin 'maralla/completor.vim'              " New completor
 Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
 Plugin 'Chiel92/vim-autoformat'             " Autoformat
 
-"---------------------------------------------------------------
-Plugin 'fatih/vim-go'                       " This plugin adds Go language support for Vim
-Plugin 'maralla/completor.vim'              " New completor 
-
-"---------------------------------------------------------------
-Plugin 'andrewstuart/vim-kubernetes'
-
 call vundle#end()                           " required
+"---------------------------------------------------------------
+
 filetype on
 filetype plugin on
 filetype plugin indent on
@@ -70,6 +78,7 @@ filetype plugin indent on
 "=====================================================
 "" General settings
 "=====================================================
+let mapleader = "\<space>"                  " set leader to space key
 syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
@@ -79,11 +88,12 @@ set number                                  " show line numbers
 set ruler
 set ttyfast                                 " terminal acceleration
 
-set tabstop=4                               " 4 whitespaces for tabs visual presentation
+set tabstop=4 softtabstop=4                 " 4 whitespaces for tabs visual presentation
 set shiftwidth=4                            " shift lines by 4 spaces
 set smarttab                                " set tabs for a shifttabs logic
 set expandtab                               " expand tabs into spaces
 set autoindent                              " indent when moving to the next line while writing code
+set nowrap                                  " nowrap logng lines
 
 set cursorline                              " shows line under the cursor's line
 set showmatch                               " shows matching part of bracket pairs (), [], {}
@@ -93,6 +103,9 @@ set enc=utf-8                               " utf-8 by default
 set nobackup                                " no backup files
 set nowritebackup                           " only in case you don't want a backup file while editing
 set noswapfile                              " no swap files
+set noerrorbells                            " no sound on errors in vim
+set undodir=~/.vim/undodir                  " dir with undo file
+set undofile                                " undo file
 
 set backspace=indent,eol,start              " backspace removes all (indents, EOLs, start) What is start?
 
@@ -119,6 +132,7 @@ nmap Q :qa<CR>
 "=====================================================
 set incsearch                               " incremental search
 set hlsearch                                " highlight search results
+set smartcase                               " case independent search
 
 nnoremap <silent> <C-p> :FZF<CR>|           " trying to replace ctrlp
 
@@ -144,23 +158,28 @@ autocmd BufWinLeave *.py :TagbarClose
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NERDTree
 let NERDTreeWinSize=40
 let NERDTreeShowHidden=1
-autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
+"autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
 nmap " :NERDTreeToggle<CR>
+
+"=====================================================
+"" Gitgutter settings
+"=====================================================
+highlight GitGutterAdd   ctermfg=Green
+highlight GitGutterChange   ctermfg=Yellow
+highlight GitGutterDelete   ctermfg=Red
+let g:gitgutter_map_keys = 0
 
 "=====================================================
 "" Riv.vim settings
 "=====================================================
 let g:riv_disable_folding=1
 
-" save
-noremap <F4> :update<CR>
-
 " highlight 'long' lines (>= 80 symbols) in python files and spaces for yaml
 augroup vimrc_autocmds
     autocmd!
-    autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
-    autocmd FileType python,rst,c,cpp set nowrap
+    autocmd FileType python,rst,c,cpp highlight ColorColumn ctermbg=DarkGrey guibg=Black
+    " autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
+    " autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
     autocmd FileType python,rst,c,cpp set colorcolumn=80
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 augroup END
@@ -180,11 +199,17 @@ let g:syntastic_style_warning_symbol='x'
 " Autoformat
 noremap <F3> :Autoformat<CR>
 
-" Numbers On/OFF
-map <F6> :set nonumber!<CR>
-
-let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
+" save
+noremap <F4> :update<CR>
 
 " Run GOcode
 map <F5> :GoRun!<CR>
+
+" Numbers On/OFF
+map <F6> :set nonumber!<CR>
+ 
+" Numbers On/OFF
+map <F7> :UndotreeToggle<CR>
+
+let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
 
