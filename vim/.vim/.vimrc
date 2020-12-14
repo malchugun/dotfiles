@@ -228,6 +228,9 @@ noremap <F4> :update<CR>
 " Run GOcode
 "map <F5> :GoRun!<CR>
 
+" Refresh window
+map <F5> :edit!<CR>
+
 " Numbers On/OFF
 map <F6> :set nonumber!<CR>
  
