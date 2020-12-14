@@ -1,5 +1,4 @@
-"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"                                                                              "
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" "                                                                              "
 "                       __   _ _ _ __ ___  _ __ ___                            "
 "                       \ \ / / | '_ ` _ \| '__/ __|                           "
 "                        \ V /| | | | | | | | | (__                            "
@@ -71,10 +70,6 @@ Plugin 'Chiel92/vim-autoformat'             " Autoformat
 call vundle#end()                           " required
 "---------------------------------------------------------------
 
-filetype on
-filetype plugin on
-filetype plugin indent on
-
 "=====================================================
 "" General settings
 "=====================================================
@@ -117,6 +112,13 @@ set exrc                                    " enable usage of additional .vimrc 
 set secure                                  " prohibit .vimrc files to execute shell, create files, etc...
 
 "=====================================================
+"" Files settings
+"=====================================================
+filetype on
+filetype plugin on
+filetype plugin indent on
+
+"=====================================================
 "" Tabs / Buffers settings
 "=====================================================
 tab sball
@@ -126,7 +128,9 @@ set mouse=a
 nmap <F9> :bprev<CR>
 nmap <F10> :bnext<CR>
 nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
-nmap Q :qa<CR>
+" nmap <silent> <leader>Q :q!<CR> 
+" nmap Q :qa<CR>
+nmap Q :q<CR>
 
 "" Search settings
 "=====================================================
@@ -158,7 +162,7 @@ autocmd BufWinLeave *.py :TagbarClose
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NERDTree
 let NERDTreeWinSize=40
 let NERDTreeShowHidden=1
-"autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
+autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
 nmap " :NERDTreeToggle<CR>
 
 "=====================================================
@@ -168,6 +172,11 @@ highlight GitGutterAdd   ctermfg=Green
 highlight GitGutterChange   ctermfg=Yellow
 highlight GitGutterDelete   ctermfg=Red
 let g:gitgutter_map_keys = 0
+
+"=====================================================
+"" Code settings
+"=====================================================
+let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
 
 "=====================================================
 "" Riv.vim settings
@@ -197,19 +206,28 @@ let g:syntastic_warning_symbol='x'
 let g:syntastic_style_warning_symbol='x'
 
 " Autoformat
-noremap <F3> :Autoformat<CR>
+" noremap <F3> :Autoformat<CR>
+
+" highlight disable search
+nmap <silent> <leader>n :noh<CR> 
+
+" Git 
+nmap <silent> <leader>gs :G<CR> 
+nmap <silent> <leader>gc :Gcommit<CR> 
+nmap <silent> <leader>gp :Gpush<CR> 
+nmap <silent> <leader>gf :Gfetch<CR> 
+nmap <silent> <leader>gb :Gblame<CR>
+nmap <silent> <leader>gh :Git log --oneline --decorate --graph --all<CR>
+
+" Undo tree
+nmap <silent> <leader>u ::UndotreeToggle<CR>
 
 " save
 noremap <F4> :update<CR>
 
 " Run GOcode
-map <F5> :GoRun!<CR>
+"map <F5> :GoRun!<CR>
 
 " Numbers On/OFF
 map <F6> :set nonumber!<CR>
  
-" Numbers On/OFF
-map <F7> :UndotreeToggle<CR>
-
-let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
-
