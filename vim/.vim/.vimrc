@@ -220,7 +220,7 @@ nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>gh :Git log --oneline --decorate --graph --all<CR>
 
 " Undo tree
-nmap <silent> <leader>u ::UndotreeToggle<CR>
+nmap <silent> <leader>u :UndotreeToggle<CR>
 
 " save
 noremap <F4> :update<CR>
