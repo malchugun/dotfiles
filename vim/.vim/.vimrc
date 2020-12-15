@@ -231,7 +231,7 @@ nmap <silent> <leader>u :UndotreeToggle<CR>
 noremap <F4> :update<CR>
 
 " Run GOcode
-"map <F5> :GoRun!<CR>
+""map <F5> :GoRun!<CR>
 
 " Refresh window
 map <F5> :edit!<CR>
