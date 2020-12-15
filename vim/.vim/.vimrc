@@ -214,6 +214,7 @@ nmap <silent> <leader>n :noh<CR>
 " Git 
 nmap <silent> <leader>gs :G<CR> 
 nmap <silent> <leader>gc :Gcommit<CR> 
+nmap <silent> <leader>ga :Gcommit --amend<CR> 
 nmap <silent> <leader>gp :Gpush<CR> 
 nmap <silent> <leader>gf :Gfetch<CR> 
 nmap <silent> <leader>gb :Gblame<CR>
@@ -231,7 +232,7 @@ nmap <silent> <leader>u :UndotreeToggle<CR>
 noremap <F4> :update<CR>
 
 " Run GOcode
-"map <F5> :GoRun!<CR>
+""map <F5> :GoRun!<CR>
 
 " Refresh window
 map <F5> :edit!<CR>
