@@ -218,6 +218,7 @@ nmap <silent> <leader>gc :Gcommit<CR>
 nmap <silent> <leader>ga :Gcommit --amend<CR> 
 nmap <silent> <leader>gp :Gpush<CR> 
 nmap <silent> <leader>gf :Gfetch<CR> 
+nmap <silent> <leader>gr :Grebase<CR> 
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>gl :Git log --oneline --decorate --graph<CR>
 
