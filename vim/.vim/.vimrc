@@ -227,8 +227,9 @@ nmap <silent> <leader>dl :diffget //2<CR>
 nmap <silent> <leader>dr :diffget //3<CR>
 nmap <silent> <leader>do :only<CR>
 
-" Terminal
-nmap <silent> <leader>t :below terminal ++rows=10<CR>
+" Terminal bottom window
+nmap <silent> <leader>tt :below terminal ++rows=10<CR>
+tnoremap <silent> <leader>ts <C-\><C-n>
 
 " Undo tree
 nmap <silent> <leader>u :UndotreeToggle<CR>
@@ -236,11 +237,8 @@ nmap <silent> <leader>u :UndotreeToggle<CR>
 " Save
 noremap <F4> :update<CR>
 
-" Exit from scroll mode in terminal
-tnoremap <Esc><Esc> <C-\><C-n>
-
 " Run GOcode
-""map <F5> :GoRun!<CR>
+"map <F5> :GoRun!<CR>
 
 " Refresh window
 map <F5> :edit!<CR>
