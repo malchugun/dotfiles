@@ -233,8 +233,11 @@ nmap <silent> <leader>t :below terminal ++rows=10<CR>
 " Undo tree
 nmap <silent> <leader>u :UndotreeToggle<CR>
 
-" save
+" Save
 noremap <F4> :update<CR>
+
+" Exit from scroll mode in terminal
+tnoremap <Esc><Esc> <C-\><C-n>
 
 " Run GOcode
 ""map <F5> :GoRun!<CR>
