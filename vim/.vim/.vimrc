@@ -130,7 +130,7 @@ nmap <F10> :bnext<CR>
 nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
 " nmap <silent> <leader>Q :q!<CR> 
 " nmap Q :qa<CR>
-nmap Q :q<CR>
+nmap Q :q!<CR>
 
 "" Search settings
 "=====================================================
