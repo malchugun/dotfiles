@@ -227,6 +227,9 @@ nmap <silent> <leader>dl :diffget //2<CR>
 nmap <silent> <leader>dr :diffget //3<CR>
 nmap <silent> <leader>do :only<CR>
 
+" Terminal
+nmap <silent> <leader>t :below terminal ++rows=10<CR>
+
 " Undo tree
 nmap <silent> <leader>u :UndotreeToggle<CR>
 
@@ -241,4 +244,5 @@ map <F5> :edit!<CR>
 
 " Numbers On/OFF
 map <F6> :set nonumber!<CR>
- 
+
+
