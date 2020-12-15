@@ -168,7 +168,7 @@ nmap " :NERDTreeToggle<CR>
 "=====================================================
 "" Gitgutter settings
 "=====================================================
-highlight GitGutterAdd   ctermfg=Green
+highlight GitGutterAdd      ctermfg=Green
 highlight GitGutterChange   ctermfg=Yellow
 highlight GitGutterDelete   ctermfg=Red
 let g:gitgutter_map_keys = 0
@@ -217,7 +217,12 @@ nmap <silent> <leader>gc :Gcommit<CR>
 nmap <silent> <leader>gp :Gpush<CR> 
 nmap <silent> <leader>gf :Gfetch<CR> 
 nmap <silent> <leader>gb :Gblame<CR>
-nmap <silent> <leader>gh :Git log --oneline --decorate --graph --all<CR>
+nmap <silent> <leader>gl :Git log --oneline --decorate --graph<CR>
+
+" Diff(vim)
+nmap <silent> <leader>dl :diffget //2<CR>
+nmap <silent> <leader>dr :diffget //3<CR>
+nmap <silent> <leader>do :only<CR>
 
 " Undo tree
 nmap <silent> <leader>u :UndotreeToggle<CR>
