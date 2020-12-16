@@ -230,6 +230,7 @@ nmap <silent> <leader>do :only<CR>
 " Terminal bottom window
 nmap <silent> <leader>tt :below terminal ++rows=10<CR>
 tnoremap <silent> <leader>ts <C-\><C-n>
+" to exit from scroll mode just press insert key
 
 " Undo tree
 nmap <silent> <leader>u :UndotreeToggle<CR>
