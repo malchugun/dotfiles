@@ -213,6 +213,7 @@ let g:syntastic_style_warning_symbol='x'
 nmap <silent> <leader>n :noh<CR> 
 
 " Git 
+" Press (leader d v) on conflict file to solve 
 nmap <silent> <leader>gs :G<CR> 
 nmap <silent> <leader>gc :Gcommit<CR> 
 nmap <silent> <leader>ga :Gcommit --amend<CR> 
