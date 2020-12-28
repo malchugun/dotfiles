@@ -215,14 +215,14 @@ nmap <silent> <leader>n :noh<CR>
 " Git 
 " Native bind help https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt 
 nmap <silent> <leader>gs :G<CR> 
-nmap <silent> <leader>gc :Gcommit<CR> 
-nmap <silent> <leader>ga :Gcommit --amend<CR> 
-nmap <silent> <leader>gp :Gpush<CR> 
-nmap <silent> <leader>gf :Gfetch<CR> 
-nmap <silent> <leader>gr :Grebase<CR> 
-nmap <silent> <leader>gb :Gblame<CR>
-nmap <silent> <leader>gl :Git log --oneline --decorate --graph<CR>
-nmap <silent> <leader>ga :Git log --oneline --decorate --graph --all<CR>
+nmap <silent> <leader>gc :G commit<CR> 
+nmap <silent> <leader>ga :G commit --amend<CR> 
+nmap <silent> <leader>gp :Git_push<CR> 
+nmap <silent> <leader>gf :Git_fetch<CR> 
+nmap <silent> <leader>gr :G rebase<CR> 
+nmap <silent> <leader>gb :G blame<CR>
+nmap <silent> <leader>gl :Gclog --oneline --decorate --graph<CR>
+nmap <silent> <leader>ga :Gclog --oneline --decorate --graph --all<CR>
 
 " Diff(vim)
 nmap <silent> <leader>dl :diffget //2<CR>
