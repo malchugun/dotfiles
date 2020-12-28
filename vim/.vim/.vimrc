@@ -217,10 +217,10 @@ nmap <silent> <leader>n :noh<CR>
 nmap <silent> <leader>gs :G<CR> 
 nmap <silent> <leader>gc :G commit<CR> 
 nmap <silent> <leader>ga :G commit --amend<CR> 
-nmap <silent> <leader>gp :Git_push<CR> 
-nmap <silent> <leader>gf :Git_fetch<CR> 
+nmap <silent> <leader>gp :G push<CR> 
+nmap <silent> <leader>gf :G fetch<CR> 
 nmap <silent> <leader>gr :G rebase<CR> 
-nmap <silent> <leader>gb :Git_blame<CR>
+nmap <silent> <leader>gb :G blame<CR>
 nmap <silent> <leader>gl :G log --oneline --decorate --graph<CR>
 nmap <silent> <leader>ga :G log --oneline --decorate --graph --all<CR>
 nnoremap <silent> <leader>gd :execute 'Gdiffsplit '.input('Enter diff argument: ').''<CR>
