@@ -224,6 +224,7 @@ nmap <silent> <leader>gb :G blame<CR>
 nmap <silent> <leader>gl :G log --oneline --decorate --graph<CR>
 nmap <silent> <leader>ga :G log --oneline --decorate --graph --all<CR>
 nnoremap <silent> <leader>gt :execute 'Git checkout '.input('Enter checkout argument: ').''<CR>
+nnoremap <silent> <leader>gn :execute 'Git checkout -B '.input('Enter checkout argument: ').''<CR>
 nnoremap <silent> <leader>gm :execute 'Git merge '.input('Enter branch to merge: ').''<CR>
 nnoremap <silent> <leader>gd :execute 'Gdiffsplit '.input('Enter diff argument: ').''<CR>
 
