@@ -221,8 +221,8 @@ nmap <silent> <leader>gp :Git_push<CR>
 nmap <silent> <leader>gf :Git_fetch<CR> 
 nmap <silent> <leader>gr :G rebase<CR> 
 nmap <silent> <leader>gb :G blame<CR>
-nmap <silent> <leader>gl :Gclog --oneline --decorate --graph<CR>
-nmap <silent> <leader>ga :Gclog --oneline --decorate --graph --all<CR>
+nmap <silent> <leader>gl :G log --oneline --decorate --graph<CR>
+nmap <silent> <leader>ga :G log --oneline --decorate --graph --all<CR>
 
 " Diff(vim)
 nmap <silent> <leader>dl :diffget //2<CR>
