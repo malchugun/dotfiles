@@ -226,8 +226,6 @@ nmap <silent> <leader>ga :G log --oneline --decorate --graph --all<CR>
 nnoremap <silent> <leader>gd :execute 'Gdiffsplit '.input('Enter diff argument: ').''<CR>
 nnoremap <silent> <leader>gm :execute 'Git merge '.input('Enter branch to merge: ').''<CR>
 
-
-
 " Diff(vim)
 nmap <silent> <leader>dl :diffget //2<CR>
 nmap <silent> <leader>dr :diffget //3<CR>
