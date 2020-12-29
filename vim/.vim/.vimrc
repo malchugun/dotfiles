@@ -221,12 +221,16 @@ nmap <silent> <leader>gp :G push<CR>
 nmap <silent> <leader>gf :G fetch<CR> 
 nmap <silent> <leader>gr :G rebase<CR> 
 nmap <silent> <leader>gb :G blame<CR>
+" If you dive in commit, Ctrl+o will bring you back to the log tree. (see :h CTRL-O and :h jumplist)
+" To open the commit in a split window :h fugitive-:Gblame tells you that you can use o when you are on the commit line. You can also use shift+o to open it in a new tab.
 nmap <silent> <leader>gl :G log --oneline --decorate --graph<CR>
 nmap <silent> <leader>ga :G log --oneline --decorate --graph --all<CR>
 nnoremap <silent> <leader>gt :execute 'Git checkout '.input('Enter checkout argument: ').''<CR>
 nnoremap <silent> <leader>gn :execute 'Git checkout -B '.input('Enter checkout argument: ').''<CR>
 nnoremap <silent> <leader>gm :execute 'Git merge '.input('Enter branch to merge: ').''<CR>
 nnoremap <silent> <leader>gd :execute 'Gdiffsplit '.input('Enter diff argument: ').''<CR>
+
+
 
 " Diff(vim)
 nmap <silent> <leader>dl :diffget //2<CR>
