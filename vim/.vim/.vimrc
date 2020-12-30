@@ -230,8 +230,6 @@ nnoremap <silent> <leader>gn :execute 'Git checkout -B '.input('Enter checkout a
 nnoremap <silent> <leader>gm :execute 'Git merge '.input('Enter branch to merge: ').''<CR>
 nnoremap <silent> <leader>gd :execute 'Gdiffsplit '.input('Enter diff argument: ').''<CR>
 
-
-
 " Diff(vim)
 nmap <silent> <leader>dl :diffget //2<CR>
 nmap <silent> <leader>dr :diffget //3<CR>
