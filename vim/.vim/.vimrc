@@ -89,7 +89,7 @@ set shiftwidth=4                            " shift lines by 4 spaces
 set smarttab                                " set tabs for a shifttabs logic
 set expandtab                               " expand tabs into spaces
 set autoindent                              " indent when moving to the next line while writing code
-set nowrap                                  " nowrap logng lines
+set wrap                                    " wrap logng lines
 
 set cursorline                              " shows line under the cursor's line
 set showmatch                               " shows matching part of bracket pairs (), [], {}
