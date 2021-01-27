@@ -181,6 +181,11 @@ let g:gitgutter_map_keys = 0
 let g:completor_gocode_binary = '~/Projects/Go/bin/gocode'
 
 "=====================================================
+"" Snippets
+"=====================================================
+let g:snipMate = { 'snippet_version' : 1 }
+
+"=====================================================
 "" Riv.vim settings
 "=====================================================
 let g:riv_disable_folding=1
