@@ -121,3 +121,5 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # Brew
 export PATH=/opt/homebrew/bin:$PATH
 
+# Docker
+export export DOCKER_HOST=tcp://10.10.200.69:2376
