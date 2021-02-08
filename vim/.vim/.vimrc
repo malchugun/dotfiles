@@ -250,7 +250,7 @@ tnoremap <silent> <leader>ts <C-\><C-n>
 nmap <silent> <leader>u :UndotreeToggle<CR>
 
 " Save
-noremap <F4> :update<CR>
+noremap <F4> :update!<CR>
 
 " Run GOcode
 "map <F5> :GoRun!<CR>
