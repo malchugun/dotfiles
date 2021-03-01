@@ -21,6 +21,7 @@ cd
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/.oh-my-zsh ~/.oh-my-zsh
 ln -s ~/.dotfiles/zsh/themes/malchugun.zsh-theme ~/.dotfiles/zsh/.oh-my-zsh/themes/malchugun.zsh-theme
+touch .docker_host
 
 # vim
 ln -s ~/.dotfiles/vim/.vim ~/.vim

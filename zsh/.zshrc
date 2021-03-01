@@ -123,4 +123,4 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=/opt/homebrew/bin:$PATH
 
 # Docker for m1
-export DOCKER_HOST=tcp://10.10.200.69:2375
+source .docker_host
