@@ -3,8 +3,11 @@
 # install vim
 sudo apk add vim
 
+# install python3
+sudo apk add python3
+
 # install necessary packages
-sudo apk add zsh mtr-tiny tcpdump git htop iptraf-ng pv lzop tmux ack-grep 
+sudo apk add zsh mtr tcpdump git htop iptraf-ng pv lzo tmux ack 
 
 # git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
