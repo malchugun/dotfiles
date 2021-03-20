@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # install vim
-sudo apk get vim
+sudo apk add vim
 
 # install necessary packages
-sudo apk get zsh mtr-tiny tcpdump git htop iptraf-ng pv lzop tmux ack-grep 
+sudo apk add zsh mtr-tiny tcpdump git htop iptraf-ng pv lzop tmux ack-grep 
 
 # git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
