@@ -112,6 +112,8 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias p="pwd"
 alias l="ls --group-directories-first -aX"
 alias mtr="sudo mtr"
+alias k="kubectl"
+# MCS openstack
 alias openstack='docker run -it --rm -e OS_AUTH_URL=$OS_AUTH_URL -e OS_PROJECT_DOMAIN_ID=$OS_PROJECT_DOMAIN_ID -e OS_REGION_NAME=$OS_REGION_NAME -e OS_PROJECT_NAME=$OS_PROJECT_NAME -e OS_USER_DOMAIN_NAME=$OS_USER_DOMAIN_NAME -e OS_IDENTITY_API_VERSION=$OS_IDENTITY_API_VERSION -e OS_INTERFACE=$OS_INTERFACE -e OS_PASSWORD=$OS_PASSWORD -e OS_USERNAME=$OS_USERNAME -e OS_PROJECT_ID=$OS_PROJECT_ID ullbergm/openstack-client:latest openstack'
 alias brewi="/usr/local/Homebrew/bin/brew"
 
@@ -122,5 +124,8 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # Brew
 export PATH=/opt/homebrew/bin:$PATH
 
-# Docker for m1
-#source .docker_host
+# Kubectl auto-completion
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
+complete -F __start_kubectl kubectl
+
