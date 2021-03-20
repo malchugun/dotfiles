@@ -7,7 +7,7 @@ sudo apk add vim
 sudo apk add python3
 
 # install necessary packages
-sudo apk add zsh mtr tcpdump git htop iptraf-ng pv lzo tmux ack shadow
+sudo apk add zsh mtr tcpdump git htop iptraf-ng pv lzo tmux ack shadow sed
 
 # git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
