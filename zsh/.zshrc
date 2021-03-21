@@ -126,7 +126,7 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=/opt/homebrew/bin:$PATH
 
 # k8s
-if command -v COMMAND &> /dev/null
+if command -v kubectl &> /dev/null
 then
     # Kubectl auto-completion
     source <(kubectl completion zsh)
