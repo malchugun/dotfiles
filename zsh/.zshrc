@@ -118,7 +118,6 @@ alias brewi="/usr/local/Homebrew/bin/brew"
 # MCS openstack
 alias openstack='docker run -it --rm -e OS_AUTH_URL=$OS_AUTH_URL -e OS_PROJECT_DOMAIN_ID=$OS_PROJECT_DOMAIN_ID -e OS_REGION_NAME=$OS_REGION_NAME -e OS_PROJECT_NAME=$OS_PROJECT_NAME -e OS_USER_DOMAIN_NAME=$OS_USER_DOMAIN_NAME -e OS_IDENTITY_API_VERSION=$OS_IDENTITY_API_VERSION -e OS_INTERFACE=$OS_INTERFACE -e OS_PASSWORD=$OS_PASSWORD -e OS_USERNAME=$OS_USERNAME -e OS_PROJECT_ID=$OS_PROJECT_ID ullbergm/openstack-client:latest openstack'
 
-
 # Pathes
 # Golang
 export GOPATH=$HOME/Projects/Go
@@ -130,4 +129,13 @@ export PATH=/opt/homebrew/bin:$PATH
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
 complete -F __start_kubectl kubectl
+
+# K8s kluster and namespace print in statusbar
+function iterm2_print_user_vars() {
+  iterm2_set_user_var kubecontext $(kubectl config current-context)
+  iterm2_set_user_var kubenamespace $(kubectl config view --minify --output 'jsonpath={..namespace}'; echo)
+}
+
+# Enable iterm2 statusbar
+test -e "$HOME/.dotfiles/zsh/.iterm2_shell_integration.zsh" && source "$HOME/.dotfiles/zsh/.iterm2_shell_integration.zsh" || true
 
