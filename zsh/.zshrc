@@ -62,7 +62,7 @@ plugins=(
   git
   kubectl
   docker
-  zsh-kubectl-prompt
+#  zsh-kubectl-prompt
 )
 
 source $ZSH/oh-my-zsh.sh
