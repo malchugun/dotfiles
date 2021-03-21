@@ -125,16 +125,20 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # Brew
 export PATH=/opt/homebrew/bin:$PATH
 
-# Kubectl auto-completion
-source <(kubectl completion zsh)
-complete -F __start_kubectl k
-complete -F __start_kubectl kubectl
+# k8s
+if command -v COMMAND &> /dev/null
+then
+    # Kubectl auto-completion
+    source <(kubectl completion zsh)
+    complete -F __start_kubectl k
+    complete -F __start_kubectl kubectl
 
-# K8s kluster and namespace print in statusbar
-function iterm2_print_user_vars() {
-  iterm2_set_user_var kubecontext $(kubectl config current-context)
-  iterm2_set_user_var kubenamespace $(kubectl config view --minify --output 'jsonpath={..namespace}'; echo)
-}
+    # K8s kluster and namespace print in statusbar
+    function iterm2_print_user_vars() {
+        iterm2_set_user_var kubecontext $(kubectl config current-context)
+        iterm2_set_user_var kubenamespace $(kubectl config view --minify --output 'jsonpath={..namespace}'; echo)
+    }
+fi
 
 # Enable iterm2 statusbar
 test -e "$HOME/.dotfiles/zsh/.iterm2_shell_integration.zsh" && source "$HOME/.dotfiles/zsh/.iterm2_shell_integration.zsh" || true
